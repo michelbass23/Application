@@ -1,39 +1,47 @@
-<ion-header>
+<ion-header class="ios-no-border">
   <ion-toolbar>
-    <ion-title>Application</ion-title>
+    <!-- <ion-title>Application</ion-title> -->
   </ion-toolbar>
 </ion-header>
 
-<ion-content >
+<ion-content>
 
-  <div class="container">    
-  <br />
 
-  <ion-avatar>
-    <div class="image-cropper" >
-      <img src="http://placekitten.com/g/200/300">
+  <ion-card>
+    <ion-img src="assets/images/header1.png"></ion-img>
+  </ion-card>
+
+
+
+
+  <ion-card-content>
+
+    <div class="signin">
+
+      <ion-item>
+        <ion-icon name="home">
+
+        </ion-icon>
+        <ion-input type="text" name="usuario" placeholder=" Usuário">
+        </ion-input>
+      </ion-item>
+
+
+      <ion-item>
+        <ion-icon name="lock-closed-outline">
+        </ion-icon>
+        <ion-input type="password" name="password" placeholder=" *********">
+        </ion-input>
+      </ion-item>
+
+
+      <ion-button (click)="irHome()" fill="solid" shape="round" color="dark" class="ion-no-padding">
+        Entrar
+      </ion-button>
     </div>
-  </ion-avatar>
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <form>
-    <ion-item class="ion-margin-top" lines="none">
-      <ion-input type="Usuário" placeholder="Usuário"></ion-input>
-    </ion-item>
 
-    <ion-item class="ion-margin-top" lines="none">
-      <ion-input type="Senha" placeholder="Senha"></ion-input>
-    </ion-item>
+  </ion-card-content>
 
-    <ion-button class="ion-margin-top" color="light" expand="block">
-      Logar
-    </ion-button>
-    
-  </form>
 
-</div>
+
 </ion-content>
