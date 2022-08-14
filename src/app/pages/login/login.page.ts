@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController} from 'ionic-angular';
 import { HomePage } from "../../pages/home/home.page";
-
+import { LoadingController } from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -10,13 +10,18 @@ import { HomePage } from "../../pages/home/home.page";
 })
 export class LoginPage implements OnInit {
 
-  constructor(public navCtrl: NavController) { }
+  constructor(private loadCtrl:LoadingController,private navCtrl:NavController) { }
 
   ngOnInit() {
+
   }
 
-  irHome(){
-    this.navCtrl.push(HomePage, {}, {animate: true} );    
+    registrar(){
+      this.navCtrl.navigateRoot('registrar');
+    }
+
+ 
+
   }
   
-}
+
