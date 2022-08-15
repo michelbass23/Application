@@ -1,20 +1,8 @@
-<ion-header class="ios-no-border">
-  <ion-toolbar>
-    <!-- <ion-title>Application</ion-title> -->
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
-
-  <ion-card>
-    <ion-img src="assets/images/header1.png"></ion-img>
-  </ion-card>
-
-
-
-
-  <ion-card-content>
+    <div class="bg">
+      <ion-img src="assets/images/header1.png"></ion-img>
+    </div>
+ 
 
     <div class="signin">
 
@@ -22,7 +10,9 @@
         <ion-icon name="home">
 
         </ion-icon>
-        <ion-input type="text" name="usuario" placeholder=" Usuário">
+        <ion-input type="email" name="usuario" 
+        placeholder="seuemail@email.com.br" [(ngModel)]="email"
+        >
         </ion-input>
       </ion-item>
 
@@ -30,23 +20,27 @@
       <ion-item>
         <ion-icon name="lock-closed-outline">
         </ion-icon>
-        <ion-input type="password" name="password" placeholder=" *********">
+        <ion-input type="password" name="password" [(ngModel)]="senha"
+        placeholder=" *********">
         </ion-input>
       </ion-item>
 
 
-      <ion-button shape="block" color="dark" class="ion-no-padding">
-        Entrar
+      <ion-button shape="block"
+       color="dark"(click)="login()" 
+       class="ion-no-padding">
+        Entrar       
       </ion-button>
       
-      <ion-button (click)="registrar()" shape="block" color="dark" class="ion-no-padding">
+      <ion-button (click)="registrar()"
+      shape="block" color="dark"
+      class="ion-no-padding">
         Registrar
       </ion-button>
       <a href="#">Esqueceu a sua senha ?</a>
     </div>
 
-  </ion-card-content>
-
+ 
 
 
 </ion-content>

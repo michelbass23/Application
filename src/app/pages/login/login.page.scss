@@ -1,10 +1,7 @@
 ion-content {
     --ion-background-color: #E1EAF9 !important;
 }
-ion-toolbar {
-    --ion-background-color: transparent;
-    opacity: 0;
-}
+
 ion-header {
     position: absolute;
 }
@@ -21,9 +18,4 @@ ion-item {
     ion-input {
         color: red;
     }
-}
-
-ion-card {
-    box-shadow: none !important;
-    background-color: transparent;
 }
